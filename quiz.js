@@ -7,9 +7,12 @@ var inputInitials;
 var totalSeconds = document.getElementById("countdown").textContent;
 
 function startQuiz() {
-  document.startButton.addEventListener("click", countdownTimer);
-  console.log();
+  document.startButton.addEventListener("click", countdownTimer(){
+
+});
 }
+startQuiz();
+console.log(startQuiz);
 
 function countdownTimer() {
   var countdown = setInterval(function() {
@@ -17,18 +20,21 @@ function countdownTimer() {
     document.getElementById("countdown").textContent = seconds;
     if (seconds <= 0) clearInterval(countdown);
   }, 1000);
-  console.log();
 }
+countdownTimer();
+console.log(countdownTimer);
 
 function addTime() {
   addTime = secondsElapsed + 15;
-  console.log();
 }
+addTime();
+console.log(addTime);
 
 function removeTime() {
   removeTime = secondsElapsed - 5;
-  console.log();
 }
+removeTime();
+console.log(removeTime);
 
 function isCorrectAnswer() {
   if (userAnswer) {
@@ -40,7 +46,8 @@ function isCorrectAnswer() {
 
     removeTime();
   }
-  console.log();
 }
+isCorrectAnswer();
+console.log(isCorrectAnswer);
 
 function storeScore() {}
