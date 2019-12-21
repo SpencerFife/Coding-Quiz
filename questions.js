@@ -1,21 +1,21 @@
 var questions = [
     {
-        question: "",
+        question: "What does HTML stand for?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "Hypertext Maliable Logarithms",
+            b: "Hypertext Markup Language",
+            c: "Honest Telemetry for Marketable Land",
+            d: "No one knows for sure"
         },
-        correctAnswer: ""
+        correctAnswer: "Hypertext Markup Language"
     },
     {
-        question: "",
+        question: "What is a function in programming?",
         answers: {
-            a: "",
+            a: "A social gathering.",
             b: "",
             c: "",
-            d: ""
+            d: "A set of statements that performs a task or calculates a value."
         },
         correctAnswer: ""
     {
