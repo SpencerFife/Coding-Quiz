@@ -5,9 +5,14 @@
 }
 
 ;
-#countdown {
-    display: flex;
-    justify-content: right;
+.h1 {
+    text-align: center;
+}
+
+#startQuiz {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }
 
 ;
