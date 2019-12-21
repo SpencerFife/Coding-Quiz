@@ -11,6 +11,10 @@ function startQuiz() {}
 
 function timer() {}
 
+function addTime() {}
+
+function removeTime() {}
+
 function submitAnswer() {}
 
 function storeScore() {}
