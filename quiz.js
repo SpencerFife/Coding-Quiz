@@ -1,23 +1,19 @@
 var clearHighscoreButton;
 var submitHighscoreButton;
-var viewHighscores;
-var secondsElapsed;
+var viewHighscores = document.querySelector("#highscores");
+var secondsDisplay = document.querySelector("#countdown");
 var storedScores;
 var inputInitials;
-var totalSeconds = document.getElementById("countdown").textContent;
+var startButton = document.querySelector("#start");
 
-function startQuiz() {
-  document.startButton.addEventListener("click", countdownTimer(){
+function startQuiz() {}
 
-});
-}
 startQuiz();
 console.log(startQuiz);
 
 function countdownTimer() {
   var countdown = setInterval(function() {
     seconds--;
-    document.getElementById("countdown").textContent = seconds;
     if (seconds <= 0) clearInterval(countdown);
   }, 1000);
 }
