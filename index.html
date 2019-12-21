@@ -12,10 +12,19 @@
     />
 
     <link rel="stylesheet" href="quiz.css" />
-    <title>Document</title>
+    <title>Coding Quiz Challenge</title>
   </head>
   <body>
     <div class="header" id="myHeader">Coding Quiz Challenge</div>
+    <div class="container" id="startQuiz">
+      <button id="startButton">Start Quiz</button>
+    </div>
+    <span id="countdown">75</span>
+    <div class="container" id="questionContainer"></div>
+    <div class="container" id="answerContainer">
+      <button id="choicesButton"></button>
+    </div>
+
     <script>
       window.onscroll = function() {
         myFunction();

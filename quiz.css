@@ -3,3 +3,11 @@
     background: #555;
     color: #f1f1f1;
 }
+
+;
+#countdown {
+    display: flex;
+    justify-content: right;
+}
+
+;

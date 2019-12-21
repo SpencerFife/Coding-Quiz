@@ -1,0 +1,33 @@
+//the user is prompted to start the quiz using a "Start Quiz" button.
+
+//once the user presses the "Start Quiz" button the timer starts.
+
+//the page then resets and the timer begins.
+
+//the first question is displayed and 4 options are given below it.
+
+//if the user clicks on the correct answer the page says "correct" under the question set and then resets and 5 seconds is added to the timer.
+
+//if the user clicks the wrong answer the page says "wrong" under the question set and then resets with a new question and the timer decreases by 15 seconds.
+
+//this continues until either all the questions are answered OR the timer reaches 0 because the user has either run
+out of time naturally OR they have answered too many wrong questions.
+
+//once the timer reaches 0 the page resets with a page asking for the user to submit their initials.
+
+//once the user has submited their initials the page resets with a score table consisting of the top
+scores of each attempt at the quiz.
+
+//the scores are static and are saved on the local storage of the page.
+
+
+//there are 2 buttons on the highscore page, one "go back" button which will return the user to the main
+page and one "clear highscores" button which will delete the highscores from the local storage.
+
+Variables: 
+questions
+total seconds
+seconds elapsed
+correct/wrong
+input initials
+stored highscores
