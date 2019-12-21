@@ -4,6 +4,13 @@ var submitHighscoreButton;
 var viewHighscores;
 var totalSeconds;
 var secondsElapsed;
-var scores;
+var storedScores;
+var inputInitials;
 
 function startQuiz() {}
+
+function timer() {}
+
+function submitAnswer() {}
+
+function storeScore() {}
