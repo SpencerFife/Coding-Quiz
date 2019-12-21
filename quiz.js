@@ -1,0 +1,9 @@
+var startButton;
+var clearHighscoreButton;
+var submitHighscoreButton;
+var viewHighscores;
+var totalSeconds;
+var secondsElapsed;
+var question;
+var answers;
+var scores;
