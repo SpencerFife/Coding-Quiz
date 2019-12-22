@@ -1,49 +1,71 @@
-var clearHighscoreButton;
-var submitHighscoreButton;
-var viewHighscores = document.querySelector("#highscores");
-var secondsDisplay = document.querySelector("#countdown");
-var storedScores;
-var inputInitials;
-var startButton = document.querySelector("#start");
+$(document).ready(function() {
+  // DOM variables
+  var timerEl = document.getElementById("timer");
+  var startEl = document.getElementById("start");
+  var startQuizEl = document.getElementById("startQuiz");
+  var startQuizIntroEl = document.getElementById("startQuizIntro");
+  var titleEl = document.getElementById("questionTitle");
+  var choicesEl = document.getElementById("questionChoices");
 
-function startQuiz() {}
+  // Global variables
+  var time = questions.length * 15;
+  var questionIndex = 0;
+  var timeId;
 
-startQuiz();
-console.log(startQuiz);
-
-function countdownTimer() {
-  var countdown = setInterval(function() {
-    seconds--;
-    if (seconds <= 0) clearInterval(countdown);
-  }, 1000);
-}
-countdownTimer();
-console.log(countdownTimer);
-
-function addTime() {
-  addTime = secondsElapsed + 15;
-}
-addTime();
-console.log(addTime);
-
-function removeTime() {
-  removeTime = secondsElapsed - 5;
-}
-removeTime();
-console.log(removeTime);
-
-function isCorrectAnswer() {
-  if (userAnswer) {
-    userAnswer === answer;
-
-    addTime();
-  } else {
-    userAnswer !== answer;
-
-    removeTime();
+  // Functions
+  function clockTick() {
+    --time;
+    timerEl.innerHTML = time;
+    if (time === 0) {
+      quizOver();
+    }
   }
-}
-isCorrectAnswer();
-console.log(isCorrectAnswer);
 
-function storeScore() {}
+  function startTimer() {
+    timeId = setInterval(clockTick, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(timerId);
+  }
+
+  function startQuiz() {
+    startTimer();
+    startQuizEl.style.display = "none";
+    startQuizIntroEl.style.display = "none";
+    startEl.style.display = "none";
+
+    generateQuestion();
+  }
+
+  function generateQuestion() {
+    var currentQuestion = questions[questionIndex];
+
+    titleEl.innerHTML = "";
+    titleEl.innerHTML = currentQuestion.title;
+
+    choicesEl.innerHTML = "";
+    // Create a loop for each question choice
+    // For each choice, document create a button
+    // Add a class to the button that equals its text
+    // Add a class to define each button (question-choice)
+    // Add text to each button = ('i' + '. ' + choices)
+    // Add click function to each button
+    // Append button to div
+  }
+
+  function clickButton() {
+    ++questionIndex;
+    generateQuestion();
+  }
+
+  function storeScore() {}
+
+  function quizOver() {
+    stopTimer();
+    console.log("game over");
+  }
+
+  //Add button onclick
+  startEl.onclick = startQuiz;
+});

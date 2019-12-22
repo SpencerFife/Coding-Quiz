@@ -10,28 +10,28 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Coding Quiz Challenge</title>
   </head>
   <body>
     <div class="header" id="myHeader">Coding Quiz Challenge</div>
-    <a id="highscores">View Highscores</a>
-    <br />
-    <span id="countdown">75</span>
+    <div class="d-flex justify-content-between">
+      <a id="highscores">View Highscores</a>
+      <div id="timer">75</div>
+    </div>
     <div class="container" id="startQuiz">
       <h1>Start Quiz</h1>
     </div>
 
-    <div class="container">
+    <div class="container" id="startQuizIntro">
       Try to answer the following coding related questions within the alloted
       time limit. Keep in mind that answering a question incorrectly will
       penalize your score time by 5 seconds.
     </div>
     <button id="start">Start Quiz!</button>
 
-    <div class="container" id="questionContainer"></div>
-    <div class="container" id="answerContainer"></div>
+    <div class="container" id="questionTitle"></div>
+    <div class="container" id="questionChoices"></div>
 
     <script>
       window.onscroll = function() {
@@ -64,7 +64,8 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script src="quiz.js"></script>
+
     <script src="questions.js"></script>
+    <script src="quiz.js"></script>
   </body>
 </html>
