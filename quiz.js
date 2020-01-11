@@ -16,7 +16,7 @@ $(document).ready(function() {
   function clockTick() {
     --time;
     timerEl.innerHTML = time;
-    if (time === 0) {
+    if (time <= 0) {
       quizOver();
     }
   }
@@ -45,16 +45,30 @@ $(document).ready(function() {
     titleEl.innerHTML = currentQuestion.title;
 
     choicesEl.innerHTML = "";
-    // Create a loop for each question choice
-    // For each choice, document create a button
-    // Add a class to the button that equals its text
-    // Add a class to define each button (question-choice)
-    // Add text to each button = ('i' + '. ' + choices)
-    // Add click function to each button
-    // Append button to div
+    var choices = currentQuestion.choices;
+    for (var i = 0; i < choices.length; i++) {
+      var choicesButton = document.createElement("button");
+      choicesButton.innerText = choices[i];
+      choicesButton.onclick = checkChoice;
+      choicesEl.appendChild(choicesButton);
+    }
   }
 
-  function clickButton() {
+  function checkChoice() {
+    var correctAnswer = questions[questionIndex].answer;
+    var userAnswer = this.innerText;
+    if (correctAnswer === userAnswer) {
+      nextQuestion();
+    } else {
+      time -= 5;
+      nextQuestion();
+    }
+
+    console.log(correctAnswer, userAnswer);
+  }
+  //checkChoice();
+
+  function nextQuestion() {
     ++questionIndex;
     generateQuestion();
   }
