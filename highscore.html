@@ -16,39 +16,10 @@
   <body>
     <div class="header" id="myHeader">Coding Quiz Challenge</div>
     <div class="d-flex justify-content-between">
-      <a href="highscore.html" id="highscores">View Highscores</a>
+      <a href="index.html" id="highscores">Return to Quiz</a>
       <div id="timer">75</div>
     </div>
-    <div class="container" id="startQuiz">
-      <h1>Start Quiz</h1>
-    </div>
-
-    <div class="container" id="startQuizIntro">
-      Try to answer the following coding related questions within the alloted
-      time limit. Keep in mind that answering a question incorrectly will
-      penalize your score time by 5 seconds.
-    </div>
-    <button id="start">Start Quiz!</button>
-
-    <div class="container" id="questionTitle"></div>
-    <div class="container" id="questionChoices"></div>
-
-    <script>
-      window.onscroll = function() {
-        myFunction();
-      };
-
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-    </script>
+    <p>high score</p>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

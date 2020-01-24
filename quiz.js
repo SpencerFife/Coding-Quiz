@@ -83,6 +83,7 @@ $(document).ready(function() {
 
   function quizOver() {
     stopTimer();
+
     console.log("game over");
   }
 
