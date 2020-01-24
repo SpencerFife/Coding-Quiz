@@ -90,7 +90,19 @@ $(document).ready(function() {
     title.innerHTML = "All Done!";
     var finalScore = document.createElement("p");
     finalScore.innerHTML = "Your final score is " + timerEl.innerHTML;
-    mainEl.append(title, finalScore);
+    var label = document.createElement("label");
+    label.innerHTML = "Enter Initials: ";
+    var submitButton = document.createElement("button");
+    submitButton.innerHTML = "Submit";
+    var buttonDiv = document.createElement("div");
+    buttonDiv.classList.add("input-group-append");
+    buttonDiv.append(submitButton);
+    var inputField = document.createElement("input");
+    //inputField.setAttribute(); //inside (): type, text. then new inputField.setAttribute(): class, etc...
+
+    var parentDiv = document.createElement("div");
+    parentDiv.append(label, inputField, buttonDiv);
+    mainEl.append(title, finalScore, parentDiv);
     console.log("game over");
   }
 
