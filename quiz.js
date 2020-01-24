@@ -26,7 +26,7 @@ $(document).ready(function() {
   }
 
   function stopTimer() {
-    clearInterval(timerId);
+    clearInterval(timeId);
   }
 
   function startQuiz() {
@@ -39,6 +39,7 @@ $(document).ready(function() {
   }
 
   function generateQuestion() {
+    console.log(questionIndex, questions.length);
     var currentQuestion = questions[questionIndex];
 
     titleEl.innerHTML = "";
@@ -69,8 +70,13 @@ $(document).ready(function() {
   //checkChoice();
 
   function nextQuestion() {
+    console.log("nextQuestion", questionIndex === questions.length);
     ++questionIndex;
-    generateQuestion();
+    if (questionIndex === questions.length) {
+      quizOver();
+    } else {
+      generateQuestion();
+    }
   }
 
   function storeScore() {}
