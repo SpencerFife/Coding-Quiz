@@ -6,6 +6,7 @@ $(document).ready(function() {
   var startQuizIntroEl = document.getElementById("startQuizIntro");
   var titleEl = document.getElementById("questionTitle");
   var choicesEl = document.getElementById("questionChoices");
+  var mainEl = document.getElementById("main");
 
   // Global variables
   var time = questions.length * 15;
@@ -67,7 +68,6 @@ $(document).ready(function() {
 
     console.log(correctAnswer, userAnswer);
   }
-  //checkChoice();
 
   function nextQuestion() {
     console.log("nextQuestion", questionIndex === questions.length);
@@ -79,11 +79,18 @@ $(document).ready(function() {
     }
   }
 
+  //quiz over
+
   function storeScore() {}
 
   function quizOver() {
     stopTimer();
-
+    mainEl.innerHTML = "";
+    var title = document.createElement("h1");
+    title.innerHTML = "All Done!";
+    var finalScore = document.createElement("p");
+    finalScore.innerHTML = "Your final score is " + timerEl.innerHTML;
+    mainEl.append(title, finalScore);
     console.log("game over");
   }
 

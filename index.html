@@ -19,20 +19,22 @@
       <a href="highscore.html" id="highscores">View Highscores</a>
       <div id="timer">75</div>
     </div>
-    <div class="container" id="startQuiz">
-      <h1>Start Quiz</h1>
+
+    <div id="main">
+      <div class="container" id="startQuiz">
+        <h1>Start Quiz</h1>
+      </div>
+
+      <div class="container" id="startQuizIntro">
+        Try to answer the following coding related questions within the alloted
+        time limit. Keep in mind that answering a question incorrectly will
+        penalize your score time by 5 seconds.
+      </div>
+      <button id="start">Start Quiz!</button>
+
+      <div class="container" id="questionTitle"></div>
+      <div class="container" id="questionChoices"></div>
     </div>
-
-    <div class="container" id="startQuizIntro">
-      Try to answer the following coding related questions within the alloted
-      time limit. Keep in mind that answering a question incorrectly will
-      penalize your score time by 5 seconds.
-    </div>
-    <button id="start">Start Quiz!</button>
-
-    <div class="container" id="questionTitle"></div>
-    <div class="container" id="questionChoices"></div>
-
     <script>
       window.onscroll = function() {
         myFunction();
