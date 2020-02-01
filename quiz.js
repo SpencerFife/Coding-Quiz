@@ -86,19 +86,29 @@ $(document).ready(function() {
   function quizOver() {
     stopTimer();
     mainEl.innerHTML = "";
+
     var title = document.createElement("h1");
     title.innerHTML = "All Done!";
+
     var finalScore = document.createElement("p");
     finalScore.innerHTML = "Your final score is " + timerEl.innerHTML;
+
     var label = document.createElement("label");
     label.innerHTML = "Enter Initials: ";
+
     var submitButton = document.createElement("button");
     submitButton.innerHTML = "Submit";
+
     var buttonDiv = document.createElement("div");
     buttonDiv.classList.add("input-group-append");
     buttonDiv.append(submitButton);
+
     var inputField = document.createElement("input");
-    //inputField.setAttribute(); //inside (): type, text. then new inputField.setAttribute(): class, etc...
+    inputField.setAttribute("type", "text");
+    inputField.setAttribute("class", "form-control");
+    inputField.setAttribute("placeholder", "");
+    inputField.setAttribute("aria-label", "Recipient's Username");
+    inputField.setAttribute("aria-describedby", "button-addon2");
 
     var parentDiv = document.createElement("div");
     parentDiv.append(label, inputField, buttonDiv);
